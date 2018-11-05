@@ -9,6 +9,9 @@ This document is based on the assumption that Docker is downloaded in advance.</
   "experimental" : true
 }
 ```
+<code>docker swarm init</code></br>
+<code>docker swarm join</code></br>
+
 your ip is not 'localhost', '127.0.0.1'</br>
 <code>wget https://github.com/prometheus/prometheus/releases/download/v2.4.3/prometheus-2.4.3.linux-amd64.tar.gz</code></br>
 <code>tar xvfz prometheus-2.4.3.linux-amd64.tar.gz</code></br>
@@ -54,4 +57,12 @@ scrape_configs:
       - targets: ['yourip:9323']
 ```
 <code>./prometheus --config.file=prometheus.yml</code></br>
-Show http://yourip:9090/graph
+
+```
+$ docker service create --replicas 1 --name my-prometheus \
+ --mount type=bind,source=/tmp/prometheus.yml,destination=/etc/prometheus/p
+ --publish published=9090,target=9090,protocol=tcp \
+ prom/prometheus
+ ```
+ 
+ Show http://yourip:9090/targets/
