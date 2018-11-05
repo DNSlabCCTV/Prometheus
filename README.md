@@ -66,3 +66,22 @@ $ docker service create --replicas 1 --name my-prometheus \
  ```
  
  Show http://yourip:9090/targets/
+ 
+ ### Granfana
+#### On Debian/Ubuntu, you can install Grafana with this command: </br>
+  <code>$ wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.6.0_amd64.deb</code></br>
+  <code>$ sudo apt-get install -y adduser libfontconfig</code></br>
+  <code>$ sudo dpkg -i grafana_2.6.0_amd64.deb</code></br>
+
+Grafana start</br>
+  <code>$ sudo service grafana-server start</code></br>
+  
+#### In ubuntu 16.04</br>
+  <code>$ systemctl daemon-reload</code></br>
+  <code>$ systemctl start grafana-server</code></br>
+  <code>$ systemctl status grafana-server</code></br>
+  
+  <code>$ sudo systemctl enable grafana-server.service</code></br>
+</br>
+ 
+ 
