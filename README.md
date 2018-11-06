@@ -88,7 +88,7 @@ $ docker service create --replicas 1 --name my-prometheus \
  ```
  
  Show http://yourip:9090/targets/
- ![Prometheus](./grafana.PNG)
+ ![Prometheus](./graph.PNG)
  
 # Granfana
 #### On Debian/Ubuntu, you can install Grafana with this command: </br>
