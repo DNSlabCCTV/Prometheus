@@ -107,4 +107,4 @@ Grafana start</br>
   <code>$ docker run -i -p 8686:3000 --ulimit nofile=8192:8192 -e "GF_SECURITY_ADMIN_PASSWORD=admin" --name grafana grafana/grafana</code></br>
 </br>
  Show http://yourip:8686
- 
+ ![ex_screenshot](./grafana.PNG)
