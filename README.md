@@ -78,7 +78,7 @@ scrape_configs:
     static_configs:
       - targets: ['yourip:9323']
 ```
-<code>./prometheus --config.file=prometheus.yml</code></br>
+
 
 ```
 $ docker service create --replicas 1 --name my-prometheus \
@@ -104,7 +104,7 @@ Grafana start</br>
   <code>$ systemctl status grafana-server</code></br>
   
   <code>$ sudo systemctl enable grafana-server.service</code></br>
-  <code>docker run -i -p 8686:3000 --ulimit nofile=8192:8192 -e "GF_SECURITY_ADMIN_PASSWORD=admin" --name grafana grafana/grafana</code></br>
+  <code>$ docker run -i -p 8686:3000 --ulimit nofile=8192:8192 -e "GF_SECURITY_ADMIN_PASSWORD=admin" --name grafana grafana/grafana</code></br>
 </br>
  
  
