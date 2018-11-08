@@ -80,7 +80,11 @@ scrape_configs:
   - job_name: 'node'
     static_configs:
       - targets: ['168.131.161.202:9100']
-
+  - job_name: cadvisor
+         scrape_interval: 5s
+    static_configs:
+    - targets:
+        - cadvisor:8080
 ```
 
 
@@ -97,6 +101,20 @@ $ docker service create --replicas 1 --name my-prometheus \
  Show http://yourip:9090/targets/
  ![Prometheus](./graph.PNG)
  
+ #### cAdvisor 
+  <code>$ docker pull google/cadvisor</code></br>
+```
+ sudo docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:ro \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --volume=/dev/disk/:/dev/disk:ro \
+  --publish=8080:8080 \
+  --detach=true \
+  --name=cadvisor \
+  google/cadvisor:latest
+```
 # Granfana
 #### On Debian/Ubuntu, you can install Grafana with this command: </br>
   <code>$ wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.6.0_amd64.deb</code></br>
