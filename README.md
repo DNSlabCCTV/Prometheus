@@ -77,6 +77,10 @@ scrape_configs:
 
     static_configs:
       - targets: ['yourip:9323']
+  - job_name: 'node'
+    static_configs:
+    - targets: ['168.131.161.202:9100']
+
 ```
 
 
@@ -86,6 +90,9 @@ $ docker service create --replicas 1 --name my-prometheus \
  --publish published=9090,target=9090,protocol=tcp \
  prom/prometheus
  ```
+ #### node-exporter
+  <code>$ docker pull prom/node-exporter</code></br>
+  <code>$ docker run -d -p 9100:9100 --net="host" prom/node-exporter</code></br>
  
  Show http://yourip:9090/targets/
  ![Prometheus](./graph.PNG)
