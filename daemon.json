@@ -1,4 +1,4 @@
 {
-  "metrics-addr" : "168.131.161.202:9323",
+  "metrics-addr" : "yourip:9323",
   "experimental" : true
 }
