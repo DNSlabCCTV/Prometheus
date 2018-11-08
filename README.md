@@ -79,7 +79,7 @@ scrape_configs:
       - targets: ['yourip:9323']
   - job_name: 'node'
     static_configs:
-    - targets: ['168.131.161.202:9100']
+      - targets: ['168.131.161.202:9100']
 
 ```
 
