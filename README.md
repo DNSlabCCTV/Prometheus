@@ -101,7 +101,8 @@ $ docker service create --replicas 1 --name my-prometheus \
  Show http://yourip:9090/targets/
  ![Prometheus](./graph.PNG)
  
- #### cAdvisor 
+ # cAdvisor
+ cAdvisor (Container Advisor)는 컨테이너 사용자에게 실행중인 컨테이너의 자원 사용 및 성능 특성에 대한 이해를 제공합니다. 이것은 실행중인 A 테이너에 대한 정보를 수집, 집계, 처리 W 익스포트하는 실행중인 디먼입니다. 특히, 각 컨테이너에 대해 자원 격리 매개 변수, 히스토리 자원 사용, 히스토리 그 룹 전체 히스토리 자원 사용 및 네트워크 통계를 보존합니다. 이 데이터는 컨테이너 및 컴퓨터 전체에서 내보내집니다.
   <code>$ docker pull google/cadvisor</code></br>
 ```
 sudo docker run \
