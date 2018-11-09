@@ -96,9 +96,29 @@ $ docker service create --replicas 1 --name my-prometheus \
  --publish published=9090,target=9090,protocol=tcp \
  prom/prometheus
  ```
- ## node-exporter
+# Granfana
+#### On Debian/Ubuntu, you can install Grafana with this command: </br>
+  <code>$ wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.6.0_amd64.deb</code></br>
+  <code>$ sudo apt-get install -y adduser libfontconfig</code></br>
+  <code>$ sudo dpkg -i grafana_2.6.0_amd64.deb</code></br>
+
+Grafana start</br>
+  <code>$ sudo service grafana-server start</code></br>
+  
+#### In ubuntu 16.04</br>
+  <code>$ systemctl daemon-reload</code></br>
+  <code>$ systemctl start grafana-server</code></br>
+  <code>$ systemctl status grafana-server</code></br>
+  
+  <code>$ sudo systemctl enable grafana-server.service</code></br>
+  <code>$ docker run -i -p 8686:3000 --ulimit nofile=8192:8192 -e "GF_SECURITY_ADMIN_PASSWORD=admin" --name grafana grafana/grafana</code></br>
+</br>
+ Show http://yourip:8686
+ ![Grafana](./grafana.PNG)
+
+ # node-exporter
  Prometheus exporter for machine metrics, written in Go with pluggable metric
-collectors.
+collectors.</br>
   <code>$ docker pull prom/node-exporter</code></br>
   <code>$ docker run -d -p 9100:9100 --net="host" prom/node-exporter</code></br>
  
@@ -120,22 +140,3 @@ sudo docker run \
   --name=cadvisor \
   google/cadvisor:latest
 ```
-# Granfana
-#### On Debian/Ubuntu, you can install Grafana with this command: </br>
-  <code>$ wget https://grafanarel.s3.amazonaws.com/builds/grafana_2.6.0_amd64.deb</code></br>
-  <code>$ sudo apt-get install -y adduser libfontconfig</code></br>
-  <code>$ sudo dpkg -i grafana_2.6.0_amd64.deb</code></br>
-
-Grafana start</br>
-  <code>$ sudo service grafana-server start</code></br>
-  
-#### In ubuntu 16.04</br>
-  <code>$ systemctl daemon-reload</code></br>
-  <code>$ systemctl start grafana-server</code></br>
-  <code>$ systemctl status grafana-server</code></br>
-  
-  <code>$ sudo systemctl enable grafana-server.service</code></br>
-  <code>$ docker run -i -p 8686:3000 --ulimit nofile=8192:8192 -e "GF_SECURITY_ADMIN_PASSWORD=admin" --name grafana grafana/grafana</code></br>
-</br>
- Show http://yourip:8686
- ![Grafana](./grafana.PNG)
