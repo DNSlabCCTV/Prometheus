@@ -1,4 +1,4 @@
-### Create DashBoard
+## Create DashBoard
 ![Grafana](./Panel.PNG)
 ```
 CPU Usage
@@ -65,3 +65,15 @@ Legend format: running
 Query: engine_daemon_container_states_containers{state="stopped"}
 Legend format: stopped
 ```
+
+## Embed Panel
+Link: Share dashboard > Snapshot > Publish to snapshot.raintank.io</br>
+example: https://snapshot.raintank.io/dashboard/snapshot/6TffjbJdU4X3pErguHZifdZpaAY0yeo4</br>
+</br>
+Link: Share dashboard > Link</br>
+copy: from to</br>
+example: from=1541924063850&to=1541945663850&panelId=4</br>
+</br>
+Revise: dashboard -> dashboard-solo</br>
+</br>
+ <iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/V2wSlNjF2Ua7gv7ZGMyEUuj05CEIM0nY?from=1541924063850&to=1541945663850&panelId=4" width="650" height="300" frameborder="0"></iframe>
