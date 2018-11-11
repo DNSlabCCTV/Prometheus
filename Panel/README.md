@@ -1,7 +1,7 @@
 ### Create DashBoard
 ![Grafana](./Panel.PNG)
 ```
-#### CPU Usage
+CPU Usage
 Add Panel: Singlestat
 Unit: percent(0-100)
 Query: sum (rate (container_cpu_usage_seconds_total{id="/"}[1m])) / sum (machine_cpu_cores) * 100
