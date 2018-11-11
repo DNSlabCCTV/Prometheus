@@ -1,3 +1,4 @@
+![Grafana](./Panel.PNG)
 CPU Usage
 Add Panel: Singlestat
 Unit: percent(0-100)
