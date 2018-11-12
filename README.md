@@ -143,7 +143,7 @@ sudo docker run \
 ```
 
 # netdata
-
+Netdata는 성능 및 메모리 사용에 대한 생각을 바탕으로 서버를 모니터링하여 최신 서버 메트릭에 대한 상세한 정보를 제공합니다.</br>
 <code>docker pull titpetric/netdata</code></br>
 ```
 docker run -d --cap-add SYS_PTRACE \
