@@ -86,6 +86,10 @@ scrape_configs:
     scrape_interval: 1s
     static_configs:
       - targets: ['yourip:9200']
+  - job_name: 'netdata'
+    metrics_path: "/api/v1/allmetrics?format=prometheus"
+    static_configs:
+      - targets: ['yourip:19999']
 
 ```
 
