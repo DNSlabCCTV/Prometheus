@@ -1,7 +1,8 @@
 # Prometheus
 
 This document is based on the assumption that Docker is downloaded in advance.</br>
-Prometheus는 이러한 대상에서 메트릭 HTTP 끝점을 스크랩하여 모니터링 대상에서 메트릭을 수집하는 모니터링 플랫폼입니다. 이 가이드는 Prometheus로 첫 번째 리소스를 설치, 구성 및 모니터링하는 방법을 보여줍니다. Prometheus를 다운로드, 설치 및 실행합니다. 또한 수출 업체, 호스트 및 서비스에 대한 시계열 데이터를 노출하는 도구를 다운로드하여 설치합니다. 우리의 첫 번째 수출국은 Prometheus 자체 일 것입니다. Prometheus 자체는 메모리 사용량, 가비지 수집 등에 대한 다양한 호스트 수준 측정 기준을 제공합니다.</br>
+</br>
+Prometheus is a monitoring platform that scrapes metric HTTP endpoints on these targets to gather metrics from the monitored targets. This guide shows you how to install, configure, and monitor the first resource with Prometheus. Download, install and run Prometheus. Also download and install tools that expose time series data for exporters, hosts, and services. Our first exporter would be Prometheus itself. Prometheus itself provides a variety of host-level metrics for memory usage, garbage collection, and more.</br>
 
 ```
 docker version
@@ -86,10 +87,10 @@ scrape_configs:
     scrape_interval: 1s
     static_configs:
       - targets: ['yourip:9200']
-  - job_name: 'netdata'
-    metrics_path: "/api/v1/allmetrics?format=prometheus"
-    static_configs:
-      - targets: ['yourip:19999']
+#  - job_name: 'netdata'
+#    metrics_path: "/api/v1/allmetrics?format=prometheus"
+#    static_configs:
+#      - targets: ['yourip:19999']
 
 ```
 
@@ -131,7 +132,7 @@ collectors.</br>
  
 
  # cAdvisor
- cAdvisor (Container Advisor)는 컨테이너 사용자에게 실행중인 컨테이너의 자원 사용 및 성능 특성에 대한 이해를 제공합니다. 이것은 실행중인 A 테이너에 대한 정보를 수집, 집계, 처리 W 익스포트하는 실행중인 디먼입니다. 특히, 각 컨테이너에 대해 자원 격리 매개 변수, 히스토리 자원 사용, 히스토리 그 룹 전체 히스토리 자원 사용 및 네트워크 통계를 보존합니다. 이 데이터는 컨테이너 및 컴퓨터 전체에서 내보내집니다.</br>
+ cAdvisor (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers. Specifically, for each container it keeps resource isolation parameters, historical resource usage, and histograms of complete historical resource usage. This data is exported by container and machine-wide.</br>
   <code>$ docker pull google/cadvisor</code></br>
 ```
 sudo docker run \
@@ -147,7 +148,7 @@ sudo docker run \
 ```
 
 # netdata
-Netdata는 성능 및 메모리 사용에 대한 생각을 바탕으로 서버를 모니터링하여 최신 서버 메트릭에 대한 상세한 정보를 제공합니다.</br>
+Netdata monitors your server with thoughts of performance and memory usage, providing detailed insight into very recent server metrics.</br>
 <code>docker pull titpetric/netdata</code></br>
 ```
 docker run -d --cap-add SYS_PTRACE \
