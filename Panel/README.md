@@ -43,21 +43,21 @@ Container_Memory_Usage_Seconds
 Add Panel: Graph
 Query: sum by (name)(container_memory_usage_bytes{image!=""})
 Legend format: {{name}}
-Unit: Hertz(1/s)
+Unit: bytes/sec
 ```
 ```
 Transmitted Container Network Traffic Per Second
 Add Panel: Graph
 Query: sum by (name) (rate(container_network_transmit_bytes_total{image!=""}[1m]))
 Legend format: {{name}}
-Unit: Hertz(1/s)
+Unit: bits/sec
 ```
 ```
 Received Container Network Traffic Per Second
 Add Panel: Graph
 Query: sum by (name) (rate(container_network_receive_bytes_total{image!=""}[1m]))
 Legend format: {{name}}
-Unit: Hertz(1/s)
+Unit: bits/sec
 ```
 ```
 DockerEngine_Daemon_Container_State
@@ -82,6 +82,7 @@ Query: sum(rate(container_network_transmit_bytes_total[1m]))
 Legend format: Transmit
 Query: - sum(rate(container_network_receive_bytes_total[1m]))
 Legend format: Receive
+Unit: bits/sec
 ```
 
 ## Embed Panel
