@@ -65,6 +65,17 @@ Legend format: running
 Query: engine_daemon_container_states_containers{state="stopped"}
 Legend format: stopped
 ```
+```
+Docker Container
+Add Panel: Singlestat
+Query: engine_daemon_container_states_containers{state="running"}
+```
+
+```
+Band Width
+Add Panel: Graph
+Query: netdata_system_cpu_percentage_average {dimension = "system"}
+```
 
 ## Embed Panel
 Link: Share dashboard > Snapshot > Publish to snapshot.raintank.io</br>
