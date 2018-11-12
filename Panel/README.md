@@ -34,26 +34,30 @@ Query: node_disk_written_bytes_total/(1e+9)
 ```
 Container_CPU_Usage_Seconds
 Add Panel: Graph
-Query: container_cpu_usage_seconds_total{image="kerberos/kerberos"}
-Legend format: {{cpu}}{{\n}}{{name}}
+Query: sum by (name) (rate(container_cpu_usage_seconds_total{image!=""}[1m]))
+Legend format: {{name}}
+Unit: Hertz(1/s)
 ```
 ```
-Container_Memory_Usage
+Container_Memory_Usage_Seconds
 Add Panel: Graph
-Query: container_memory_usage_bytes{image="kerberos/kerberos"}
-Legend format: {{image}}{{\n}}{{name}}
+Query: sum by (name)(container_memory_usage_bytes{image!=""})
+Legend format: {{name}}
+Unit: Hertz(1/s)
 ```
 ```
-Transmitted Network Traffic per Container
+Transmitted Container Network Traffic Per Second
 Add Panel: Graph
-Query: rate(container_network_transmit_bytes_total{image="kerberos/kerberos"}[1m])
-Legend format: {{image}}{{/n}}{{name}}
+Query: sum by (name) (rate(container_network_transmit_bytes_total{image!=""}[1m]))
+Legend format: {{name}}
+Unit: Hertz(1/s)
 ```
 ```
-Received Container Traffic Per Second
+Received Container Network Traffic Per Second
 Add Panel: Graph
-Query: rate(container_network_receive_bytes_total{image="kerberos/kerberos"}[1m])
-Legend format: {{image}}{{/n}}{{name}}
+Query: sum by (name) (rate(container_network_receive_bytes_total{image!=""}[1m]))
+Legend format: {{name}}
+Unit: Hertz(1/s)
 ```
 ```
 DockerEngine_Daemon_Container_State
@@ -72,9 +76,12 @@ Query: engine_daemon_container_states_containers{state="running"}
 ```
 
 ```
-Band Width
+Network I/O pressure
 Add Panel: Graph
-Query: netdata_system_cpu_percentage_average {dimension = "system"}
+Query: sum(rate(container_network_transmit_bytes_total[1m]))
+Legend format: Transmit
+Query: - sum(rate(container_network_receive_bytes_total[1m]))
+Legend format: Receive
 ```
 
 ## Embed Panel
