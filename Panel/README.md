@@ -1,5 +1,5 @@
 ## Create DashBoard
-![Grafana](./Panel.PNG)
+![Grafana](./DashBoardPanel.PNG)
 ```
 CPU Usage
 Add Panel: Singlestat
