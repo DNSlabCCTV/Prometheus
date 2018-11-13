@@ -98,7 +98,7 @@ Add: &theme=light</br>
 </br>
  <iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/V2wSlNjF2Ua7gv7ZGMyEUuj05CEIM0nY?from=1541924063850&to=1541945663850&panelId=4" width="650" height="300" frameborder="0"></iframe>
 </br>
- ![Prometheus](./Panel_example.PNG)
+![Grafana](./Panel.PNG)
  <iframe  id="my_iframe" src="https://snapshot.raintank.io/dashboard-solo/snapshot/1RYNkUr2dop55WeSQtwUm3c54OJAIT2g?from=1542060505992&to=1542082105993&panelId=4&theme=light" width="950" height="300" frameborder="0">
 </iframe></br>
 
