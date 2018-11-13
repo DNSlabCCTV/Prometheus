@@ -100,4 +100,4 @@ Add: &theme=light</br>
 </br>
  <iframe  id="my_iframe" src="https://snapshot.raintank.io/dashboard-solo/snapshot/1RYNkUr2dop55WeSQtwUm3c54OJAIT2g?from=1542060505992&to=1542082105993&panelId=4&theme=light" width="950" height="300" frameborder="0">
 </iframe></br>
-![Show](./Panel_example.PNG)
+ ![Prometheus](./Panel_example.PNG)
