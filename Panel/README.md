@@ -84,7 +84,7 @@ Query: - sum(rate(container_network_receive_bytes_total[1m]))
 Legend format: Receive
 Unit: bits/sec
 ```
-
+![Grafana](./Panel.PNG)
 ## Embed Panel
 Link: Share dashboard > Snapshot > Publish to snapshot.raintank.io</br>
 example: https://snapshot.raintank.io/dashboard/snapshot/6TffjbJdU4X3pErguHZifdZpaAY0yeo4</br>
@@ -98,7 +98,6 @@ Add: &theme=light</br>
 </br>
  <iframe src="https://snapshot.raintank.io/dashboard-solo/snapshot/V2wSlNjF2Ua7gv7ZGMyEUuj05CEIM0nY?from=1541924063850&to=1541945663850&panelId=4" width="650" height="300" frameborder="0"></iframe>
 </br>
-![Grafana](./Panel.PNG)
  <iframe  id="my_iframe" src="https://snapshot.raintank.io/dashboard-solo/snapshot/1RYNkUr2dop55WeSQtwUm3c54OJAIT2g?from=1542060505992&to=1542082105993&panelId=4&theme=light" width="950" height="300" frameborder="0">
 </iframe></br>
 
