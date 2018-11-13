@@ -84,7 +84,7 @@ Query: - sum(rate(container_network_receive_bytes_total[1m]))
 Legend format: Receive
 Unit: bits/sec
 ```
-![Grafana](./Panel.PNG)
+![Grafana_Panel](./Panel_example.PNG)
 ## Embed Panel
 Link: Share dashboard > Snapshot > Publish to snapshot.raintank.io</br>
 example: https://snapshot.raintank.io/dashboard/snapshot/6TffjbJdU4X3pErguHZifdZpaAY0yeo4</br>
