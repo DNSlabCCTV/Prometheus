@@ -128,7 +128,7 @@ Grafana start</br>
  Prometheus exporter for machine metrics, written in Go with pluggable metric
 collectors.</br>
   <code>$ docker pull prom/node-exporter</code></br>
-  <code>$ docker run -d -p 9100:9100 --net="host" prom/node-exporter</code></br>
+  <code>$ docker run -d -p 9100:9100 --net="host" --name node-exporter prom/node-exporter </code></br>
  
 
  # cAdvisor
