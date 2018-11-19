@@ -94,6 +94,7 @@ scrape_configs:
 
 ```
 
+<code>docker pull prom/prometheus</code></br>
 
 ```
 $ docker service create --replicas 1 --name my-prometheus \
