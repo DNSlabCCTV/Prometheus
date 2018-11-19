@@ -41,7 +41,6 @@ your ip is not 'localhost', '127.0.0.1'</br>
 <code>wget https://github.com/prometheus/prometheus/releases/download/v2.4.3/prometheus-2.4.3.linux-amd64.tar.gz</code></br>
 <code>tar xvfz prometheus-2.4.3.linux-amd64.tar.gz</code></br>
 <code>cd prometheus-2.4.3.linux-amd64</code></br>
-<code>cp prometheus.yml /tmp/prometheus.yml</code></br>
 <code>vi prometheus.yml</code></br>
 ```
 # my global config
@@ -93,6 +92,7 @@ scrape_configs:
 #      - targets: ['yourip:19999']
 
 ```
+<code>cp prometheus.yml /tmp/prometheus.yml</code></br>
 
 <code>docker pull prom/prometheus</code></br>
 
