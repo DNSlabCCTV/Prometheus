@@ -28,7 +28,6 @@ Server:
 ```
 <code>vi /etc/docker/daemon.json</code></br>
 ```
-// Insert this key:value
 {
   "metrics-addr" : "yourip:9323",
   "experimental" : true
