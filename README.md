@@ -1,42 +1,6 @@
 # Demo Visualization - DashBoard
 ![Demo](./Image/Final.jpg)
 
-### Grafana Panel Query
-#### Docker Container Count
-```
-Add Panel: Singlestat
-Query: engine_daemon_container_states_containers{state="running"}
-```
-#### Container CPU Usage Per Seconds
-```
-Add Panel: Graph
-Query: sum by (name) (rate(container_cpu_usage_seconds_total{image!=""}[1m]))
-Legend format: {{name}}
-Unit: Hertz(1/s)
-```
-#### Container Memory Usage Per Seconds
-```
-Add Panel: Graph
-Query: sum by (name)(container_memory_usage_bytes{image!=""})
-Legend format: {{name}}
-Unit: bytes/sec
-```
-#### Transmitted Container Network Traffic Per Second
-```
-Add Panel: Graph
-Query: sum by (name) (rate(container_network_transmit_bytes_total{image!=""}[1m]))
-Legend format: {{name}}
-Unit: bits/sec
-```
-#### Received Container Network Traffic Per Second
-```
-Add Panel: Graph
-Query: sum by (name) (rate(container_network_receive_bytes_total{image!=""}[1m]))
-Legend format: {{name}}
-Unit: bits/sec
-```
-
-
 
 # Set up Prometheus
 
@@ -196,3 +160,39 @@ docker run -d --cap-add SYS_PTRACE \
            -v /sys:/host/sys:ro \
            -p 19999:19999 titpetric/netdata
 ```
+
+### Add Grafana Panel Query
+#### Docker Container Count
+```
+Add Panel: Singlestat
+Query: engine_daemon_container_states_containers{state="running"}
+```
+#### Container CPU Usage Per Seconds
+```
+Add Panel: Graph
+Query: sum by (name) (rate(container_cpu_usage_seconds_total{image!=""}[1m]))
+Legend format: {{name}}
+Unit: Hertz(1/s)
+```
+#### Container Memory Usage Per Seconds
+```
+Add Panel: Graph
+Query: sum by (name)(container_memory_usage_bytes{image!=""})
+Legend format: {{name}}
+Unit: bytes/sec
+```
+#### Transmitted Container Network Traffic Per Second
+```
+Add Panel: Graph
+Query: sum by (name) (rate(container_network_transmit_bytes_total{image!=""}[1m]))
+Legend format: {{name}}
+Unit: bits/sec
+```
+#### Received Container Network Traffic Per Second
+```
+Add Panel: Graph
+Query: sum by (name) (rate(container_network_receive_bytes_total{image!=""}[1m]))
+Legend format: {{name}}
+Unit: bits/sec
+```
+
