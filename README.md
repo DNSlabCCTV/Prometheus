@@ -6,9 +6,7 @@
 
 
 
-# Set up
-
-## Prometheus
+# Set up Prometheus
 
 This document is based on the assumption that Docker is downloaded in advance.</br>
 </br>
