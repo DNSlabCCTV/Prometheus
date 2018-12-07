@@ -2,7 +2,7 @@
 ![Demo](./Image/Final.jpg)
 
 ### Grafana Panel Query
-#### Docker Container
+#### Docker Container Count
 ```
 Add Panel: Singlestat
 Query: engine_daemon_container_states_containers{state="running"}
