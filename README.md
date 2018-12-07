@@ -2,7 +2,7 @@
 ![Demo](./Image/Demo.PNG)
 
 # Demo Visualization - DashBoard
-![Demo_DashBoard](./Image/Explanation.jpg)
+![Demo_DashBoard](./Image/Explanation.PNG)
 
 # Architecture
 ![Architecture](./Image/Architecture.PNG)
