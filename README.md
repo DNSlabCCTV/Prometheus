@@ -102,7 +102,7 @@ $ docker service create --replicas 1 --name my-prometheus \
     prom/prometheus
  ```
   Show http://yourip:9090/targets/
- ![Prometheus](./graph.PNG)
+ ![Prometheus](./../Image/graph.PNG)
  
 # Granfana
 #### On Debian/Ubuntu, you can install Grafana with this command: </br>
@@ -122,7 +122,7 @@ Grafana start</br>
   <code>$ docker run -i -p 8686:3000 --ulimit nofile=8192:8192 -e "GF_SECURITY_ADMIN_PASSWORD=admin" --name grafana grafana/grafana</code></br>
 </br>
  Show http://yourip:8686
- ![Grafana](./grafana.PNG)
+ ![Grafana](./../Image/grafana.PNG)
 
  # node-exporter
  Prometheus exporter for machine metrics, written in Go with pluggable metric
