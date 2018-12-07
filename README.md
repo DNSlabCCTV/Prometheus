@@ -7,14 +7,14 @@
 Add Panel: Singlestat
 Query: engine_daemon_container_states_containers{state="running"}
 ```
-#### Container_CPU_Usage_Seconds
+#### Container CPU Usage Per Seconds
 ```
 Add Panel: Graph
 Query: sum by (name) (rate(container_cpu_usage_seconds_total{image!=""}[1m]))
 Legend format: {{name}}
 Unit: Hertz(1/s)
 ```
-#### Container_Memory_Usage_Seconds
+#### Container Memory Usage Per Seconds
 ```
 Add Panel: Graph
 Query: sum by (name)(container_memory_usage_bytes{image!=""})
