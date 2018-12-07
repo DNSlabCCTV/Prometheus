@@ -3,6 +3,11 @@
 
 # Demo Visualization - DashBoard
 ![Demo_DashBoard](./Image/Explanation.PNG)
+#### 1. Docker Container Count
+#### 2. Container CPU Usage Per Seconds
+#### 3. Container Memory Usage Per Seconds
+#### 4. Transmitted Container Network Traffic Per Second
+#### 5. Received Container Network Traffic Per Second
 
 # Architecture
 ![Architecture](./Image/Architecture.PNG)
