@@ -1,7 +1,7 @@
 # Demo
 ![Demo](./Image/Final.jpg)
 
-### Grafana Panel
+### Grafana Panel Query
 
 
 
