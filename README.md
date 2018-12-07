@@ -1,4 +1,4 @@
-# Demo
+# Demo Visualization - DashBoard
 ![Demo](./Image/Final.jpg)
 
 ### Grafana Panel Query
