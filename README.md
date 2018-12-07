@@ -1,11 +1,12 @@
 # Demo
 ![Demo](./Image/Demo.PNG)
 
+# Demo Visualization - DashBoard
+![Demo_DashBoard](./Image/Final.jpg)
+
 # Architecture
 ![Architecture](./Image/Architecture.PNG)
 
-# Demo Visualization - DashBoard
-![Demo_DashBoard](./Image/Final.jpg)
 
 
 # Set up Prometheus
