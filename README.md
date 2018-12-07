@@ -1,7 +1,7 @@
-# Demo
+# Demo Visualization - DashBoard
 ![Demo](./Image/Demo.PNG)
 
-# Demo Visualization - DashBoard
+# Dashboard configuration
 ![Demo_DashBoard](./Image/Explanation.PNG)
 #### 1. Docker Container Count
 #### 2. Container CPU Usage Per Seconds
